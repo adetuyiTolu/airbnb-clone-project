@@ -137,3 +137,38 @@ These relationships ensure a scalable and well-structured system for managing li
 ### 7. Database Optimizations
 - **Indexing**: Frequently queried fields are indexed to speed up read operations and ensure responsiveness.
 - **Caching**: Key responses are cached to reduce database load, enhance performance, and improve user experience.
+
+## API Security
+
+Ensuring the security of the API is a top priority to protect sensitive user data, prevent abuse, and maintain the integrity of the platform. The following key measures are implemented:
+
+### 1. Authentication
+- **Method**: JSON Web Tokens (JWT) are used for secure, stateless authentication.
+- **Purpose**: Ensures only registered users can access protected endpoints and perform actions such as booking, listing properties, or making payments.
+
+### 2. Authorization
+- **Role-Based Access**: Different roles (e.g., admin, property owner, regular user) have controlled access to resources.
+- **Purpose**: Prevents unauthorized users from performing restricted operations like deleting other users' data or modifying someone else's property.
+
+### 3. Rate Limiting
+- **Implementation**: Limits the number of requests from a single IP or user over a given period.
+- **Purpose**: Protects the API from brute-force attacks, spamming, and denial-of-service (DoS) attacks.
+
+### 4. Data Validation & Sanitization
+- **Method**: All user inputs are validated and sanitized using Django REST Framework serializers.
+- **Purpose**: Prevents injection attacks, malformed data, and other security vulnerabilities at the input level.
+
+### 5. HTTPS Enforcement
+- **Implementation**: All communication between clients and the API is encrypted via HTTPS.
+- **Purpose**: Secures data in transit, especially for login credentials, payment information, and personal user data.
+
+### 6. Secure Payment Processing
+- **Integration**: Payment data is handled by trusted third-party payment gateways.
+- **Purpose**: Ensures compliance with financial security standards (e.g., PCI-DSS) and protects sensitive payment data from exposure.
+
+### 7. Token Expiry & Refresh
+- **JWT Management**: Access tokens have a short lifespan and can be refreshed using secure refresh tokens.
+- **Purpose**: Minimizes the risk in case a token is leaked or compromised.
+
+By combining these techniques, the platform ensures a secure environment for users to interact with listings, manage bookings, and process payments safely.
+
