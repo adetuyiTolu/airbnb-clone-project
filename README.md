@@ -172,3 +172,14 @@ Ensuring the security of the API is a top priority to protect sensitive user dat
 
 By combining these techniques, the platform ensures a secure environment for users to interact with listings, manage bookings, and process payments safely.
 
+## CI/CD Pipeline
+
+Continuous Integration and Continuous Deployment (CI/CD) pipelines automate the process of testing, building, and deploying code changes to ensure high-quality software delivery. By integrating code frequently and deploying updates automatically, CI/CD helps catch bugs early, reduce manual errors, and accelerate the development lifecycle.
+
+For this project, CI/CD pipelines can be implemented using tools such as:
+
+- **GitHub Actions**: Automates testing and deployment workflows directly from the GitHub repository.
+- **Docker**: Ensures consistent environments by containerizing the application for both development and production.
+- **Other CI/CD platforms**: Jenkins, CircleCI, GitLab CI, or AWS CodePipeline can also be used.
+
+Implementing a CI/CD pipeline improves reliability, speeds up releases, and supports collaboration across development teams.
