@@ -48,3 +48,62 @@ Below is a list of core technologies used in this project, along with their role
 
 - **CI/CD Pipelines**  
   Continuous Integration and Continuous Deployment pipelines automate testing, integration, and deployment processes, enabling faster and more reliable releases.
+
+  ## 🗃️ Database Design
+
+This project is built around several core entities to support the platform's functionality. Below is an overview of each entity, its key fields, and how the entities relate to one another.
+
+### 📌 Entities and Key Fields
+
+#### 1. **User**
+Represents the individuals who interact with the platform.
+- `id`: Unique identifier for each user.
+- `name`: Full name of the user.
+- `email`: User's email address (used for login and communication).
+- `password`: Hashed password for authentication.
+- `role`: Specifies if the user is a guest or host.
+
+#### 2. **Property**
+Represents a listing available for booking.
+- `id`: Unique identifier for the property.
+- `title`: Name or title of the property.
+- `description`: Detailed information about the property.
+- `location`: Address or region where the property is located.
+- `price_per_night`: Cost of staying per night.
+
+#### 3. **Booking**
+Represents a reservation made by a user.
+- `id`: Unique booking reference.
+- `user_id`: The guest who made the booking.
+- `property_id`: The property being booked.
+- `start_date`: Beginning of the reservation.
+- `end_date`: End of the reservation.
+
+#### 4. **Review**
+Represents feedback left by a user after a stay.
+- `id`: Unique identifier for the review.
+- `user_id`: Reviewer (must have booked the property).
+- `property_id`: The reviewed property.
+- `rating`: Numerical rating (e.g., 1-5 stars).
+- `comment`: Optional text feedback.
+
+#### 5. **Payment**
+Represents the financial transaction for a booking.
+- `id`: Unique transaction reference.
+- `booking_id`: Booking associated with the payment.
+- `amount`: Total amount paid.
+- `status`: Payment status (e.g., pending, completed, failed).
+- `timestamp`: Date and time the payment was made.
+
+---
+
+### 🔗 Entity Relationships
+
+- A **User** can list multiple **Properties** (if they are a host).
+- A **User** can make multiple **Bookings** (as a guest).
+- A **Booking** is linked to one **Property** and one **User**.
+- A **Review** is submitted by a **User** and linked to one **Property**.
+- A **Payment** is tied to a single **Booking**.
+
+These relationships ensure a scalable and well-structured system for managing listings, interactions, and transactions.
+
