@@ -21,3 +21,30 @@ Builds and maintains the infrastructure. Sets up CI/CD pipelines, manages enviro
 ### 👨‍💼 Product Manager
 Oversees the product vision and roadmap. Collaborates with stakeholders, gathers user requirements, prioritizes features, and ensures timely delivery of project milestones.
 
+## 🛠️ Technology Stack
+
+Below is a list of core technologies used in this project, along with their roles:
+
+- **Django**  
+  A high-level Python web framework used for building the RESTful API. It simplifies rapid development and clean, pragmatic design.
+
+- **Django REST Framework**  
+  An extension of Django that provides powerful tools and features for building and managing RESTful APIs efficiently.
+
+- **PostgreSQL**  
+  A robust, open-source relational database used for storing and managing structured application data.
+
+- **GraphQL**  
+  A query language for APIs that enables clients to request exactly the data they need, making data fetching more efficient and flexible.
+
+- **Celery**  
+  A distributed task queue used for managing asynchronous or scheduled jobs such as email notifications, report generation, or payment processing.
+
+- **Redis**  
+  An in-memory data store used for caching and message brokering, enhancing performance and supporting task queues via Celery.
+
+- **Docker**  
+  A containerization tool that ensures consistency across development, testing, and production environments by packaging the application and its dependencies into containers.
+
+- **CI/CD Pipelines**  
+  Continuous Integration and Continuous Deployment pipelines automate testing, integration, and deployment processes, enabling faster and more reliable releases.
