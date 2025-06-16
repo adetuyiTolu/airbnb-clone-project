@@ -107,3 +107,33 @@ Represents the financial transaction for a booking.
 
 These relationships ensure a scalable and well-structured system for managing listings, interactions, and transactions.
 
+## Feature Breakdown
+
+### 1. API Documentation
+- **OpenAPI Standard**: The backend APIs are documented using the OpenAPI standard to ensure clarity and ease of integration for frontend developers and third-party services.
+- **Django REST Framework**: Provides a comprehensive RESTful API for handling CRUD operations on user and property data.
+- **GraphQL**: Enables flexible and efficient querying of backend data with precise control over requested fields.
+
+### 2. User Authentication
+- **Endpoints**: `/users/`, `/users/{user_id}/`
+- **Features**: Allows users to register, log in, and manage their profiles securely. Authentication is handled via token-based methods to protect endpoints and user data.
+
+### 3. Property Management
+- **Endpoints**: `/properties/`, `/properties/{property_id}/`
+- **Features**: Users can create, update, retrieve, and delete property listings. This feature forms the core functionality for hosts or real estate agents.
+
+### 4. Booking System
+- **Endpoints**: `/bookings/`, `/bookings/{booking_id}/`
+- **Features**: Enables users to book properties, manage their reservations, and track check-in/check-out details. It ensures seamless coordination between users and property availability.
+
+### 5. Payment Processing
+- **Endpoints**: `/payments/`
+- **Features**: Manages payment transactions related to bookings. Ensures secure processing and recording of financial interactions between users and property owners.
+
+### 6. Review System
+- **Endpoints**: `/reviews/`, `/reviews/{review_id}/`
+- **Features**: Users can leave reviews on properties they've stayed in. This adds a feedback loop that helps maintain quality standards and transparency.
+
+### 7. Database Optimizations
+- **Indexing**: Frequently queried fields are indexed to speed up read operations and ensure responsiveness.
+- **Caching**: Key responses are cached to reduce database load, enhance performance, and improve user experience.
